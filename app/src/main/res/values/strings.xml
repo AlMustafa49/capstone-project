@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ResAIpku</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="detection">Detection</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="recipe_desc">Deskripsi singkat tentang resep</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="permission">Not getting permission</string>
+
+
+</resources>
