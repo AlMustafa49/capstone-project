@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="12dp"
-    android:layout_marginBottom="16dp"
+    android:layout_marginBottom="2dp"
     android:id="@+id/card_view">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -49,7 +49,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/recipe_desc"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="#636262"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

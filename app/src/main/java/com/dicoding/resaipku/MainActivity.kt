@@ -1,4 +1,5 @@
-package com.dicoding.resaipku.ui
+package com.dicoding.resaipku
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.galleryButton.setOnClickListener { startGallery() }
         binding.cameraButton.setOnClickListener { startCamera() }
+        binding.detectionButton.setOnClickListener {
+            val intent = Intent(this, ListRecipeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun startGallery() {

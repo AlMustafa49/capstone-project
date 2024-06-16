@@ -20,20 +20,17 @@
         android:theme="@style/Theme.ResAIpku"
         tools:targetApi="31">
         <activity
-            android:name=".ui.CameraActivity"
-            android:exported="false" />
-        <activity
             android:name=".RecipeDetailActivity"
             android:exported="false" />
         <activity
             android:name=".ListRecipeActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true" />
-        <activity
-            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

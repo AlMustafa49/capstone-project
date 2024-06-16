@@ -8,5 +8,22 @@
     <string name="recipe_name">Recipe Name</string>
     <string name="permission">Not getting permission</string>
 
+    <string-array name="data_name">
+        <item>Ayam Bakar Kalasan</item>
+        <item>Ayam Gulai</item>
+        <item>Ayam Kecap</item>
+    </string-array>
 
+    <string-array name="data_description">
+        <item>Ayam Bakar Kalasan adalah hidangan khas dari Kalasan, sebuah daerah di Yogyakarta, Indonesia.</item>
+        <item>Ayam Gulai adalah salah satu masakan khas Indonesia yang kaya akan rempah dan santan, menciptakan rasa gurih, pedas, dan lezat.</item>
+        <item>Ayam Kecap adalah hidangan populer dalam masakan Indonesia yang terkenal dengan rasa manis gurih dari kecap manis yang kaya akan rempah.</item>
+    </string-array>
+
+
+    <integer-array name="data_photo">
+        <item>@drawable/ayam_bakar_kalasan</item>
+        <item>@drawable/ayam_gulai</item>
+        <item>@drawable/ayam_kecap</item>
+    </integer-array>
 </resources>

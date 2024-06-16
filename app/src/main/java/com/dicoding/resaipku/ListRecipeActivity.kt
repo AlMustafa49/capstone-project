@@ -2,39 +2,53 @@ package com.dicoding.resaipku
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class ListRecipeActivity : AppCompatActivity() {
-
-    private lateinit var imgCaptured: ImageView
-    private lateinit var tvResep1: TextView
-    private lateinit var tvResep2: TextView
+    private lateinit var rvRecipe: RecyclerView
+    private val list = ArrayList<Recipe>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detection)
+        setContentView(R.layout.activity_list_recipe)
 
-        imgCaptured = findViewById(R.id.imgCaptured)
-//        tvResep1 = findViewById(R.id.tvResep1)
-//        tvResep2 = findViewById(R.id.tvResep2)
+        rvRecipe = findViewById(R.id.rv_recipe)
+        rvRecipe.setHasFixedSize(true)
 
-        // Display captured image
-        // imgCaptured.setImageBitmap(capturedImageBitmap)
-
-        tvResep1.setOnClickListener {
-            val intent = Intent(this, RecipeDetailActivity::class.java)
-            intent.putExtra("RECIPE_NAME", "Ayam Goreng")
-            startActivity(intent)
+        list.addAll(getListRecipe())
+        showRecyclerList()
+    }
+    private fun getListRecipe(): ArrayList<Recipe> {
+        val dataName = resources.getStringArray(R.array.data_name)
+        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+        val listRecipe = ArrayList<Recipe>()
+        for (i in dataName.indices) {
+            val recipe = Recipe(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1))
+            listRecipe.add(recipe)
         }
+        return listRecipe
+    }
 
-        tvResep2.setOnClickListener {
-            val intent = Intent(this, RecipeDetailActivity::class.java)
-            intent.putExtra("RECIPE_NAME", "Ayam Bakar")
-            startActivity(intent)
-        }
+    private fun showRecyclerList() {
+        rvRecipe.layoutManager = LinearLayoutManager(this)
+        val ListRecipeAdapter = ListRecipeAdapter(list)
+        rvRecipe.adapter = ListRecipeAdapter
 
-        // Tambahkan lebih banyak listener untuk resep lainnya
+        ListRecipeAdapter.setOnItemClickCallback(object : ListRecipeAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Recipe) {
+                showSelectedRecipe(data)
+            }
+        })
+    }
+
+    private fun showSelectedRecipe(recipe: Recipe) {
+        val moveIntent = Intent(this@ListRecipeActivity, RecipeDetailActivity::class.java)
+        moveIntent.putExtra("foto", recipe.photo)
+        moveIntent.putExtra("nama", recipe.name)
+        moveIntent.putExtra("deskripsi", recipe.description)
+        startActivity(moveIntent)
     }
 }
