@@ -20,16 +20,16 @@
         android:theme="@style/Theme.ResAIpku"
         tools:targetApi="31">
         <activity
-            android:name=".RecipeDetailActivity"
+            android:name=".ui.RecipeDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ListRecipeActivity"
+            android:name=".ui.ListRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>

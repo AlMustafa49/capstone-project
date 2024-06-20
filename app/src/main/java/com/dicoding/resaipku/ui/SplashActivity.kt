@@ -1,9 +1,10 @@
-package com.dicoding.resaipku
+package com.dicoding.resaipku.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.resaipku.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,13 @@
-package com.dicoding.resaipku
+package com.dicoding.resaipku.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.resaipku.data.adapter.ListRecipeAdapter
+import com.dicoding.resaipku.R
+import com.dicoding.resaipku.Recipe
 
 class ListRecipeActivity : AppCompatActivity() {
     private lateinit var rvRecipe: RecyclerView

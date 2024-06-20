@@ -1,4 +1,4 @@
-package com.dicoding.resaipku
+package com.dicoding.resaipku.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
 import com.dicoding.resaipku.databinding.ActivityMainBinding
+import com.dicoding.resaipku.utils.getImageUri
 
 
 class MainActivity : AppCompatActivity() {

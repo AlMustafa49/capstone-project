@@ -7,6 +7,7 @@
     <string name="recipe_desc">Deskripsi singkat tentang resep</string>
     <string name="recipe_name">Recipe Name</string>
     <string name="permission">Not getting permission</string>
+    <string name="favorite">Favorite</string>
 
     <string-array name="data_name">
         <item>Ayam Bakar Kalasan</item>
